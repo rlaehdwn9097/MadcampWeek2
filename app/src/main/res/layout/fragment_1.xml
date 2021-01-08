@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+        <ListView
+            android:id="@+id/f1_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="9dp" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/insertfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/customaddtask"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|right"
+             />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/deletefab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/customdelete"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|right"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fabPrimary"
+            android:src="@drawable/customdoneoutline"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|right"
+            />
+
+</FrameLayout>
+
