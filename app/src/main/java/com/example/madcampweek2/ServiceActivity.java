@@ -9,11 +9,11 @@ import com.google.android.material.tabs.TabLayout;
 
 public class ServiceActivity extends FragmentActivity {
 
-    TabLayout tabs;
-
-    Fragment1 fragment1;
-    Fragment2 fragment2;
-    Fragment3 fragment3;
+    public TabLayout tabs;
+    public Photos photosInstance;
+    public Fragment1 fragment1;
+    public Fragment2 fragment2;
+    public Fragment3 fragment3;
     //---------------사진추가__위------------------------------------------------------
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -26,7 +26,7 @@ public class ServiceActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-
+        Photos photosInstance = Photos.getInstance();
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();

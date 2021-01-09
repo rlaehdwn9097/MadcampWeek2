@@ -8,7 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <GridView
-        android:id="@+id/gridViewImages"
+        android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:horizontalSpacing="10dp"
@@ -16,8 +16,13 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:verticalSpacing="10dp">
-
     </GridView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewTest"
+        />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
