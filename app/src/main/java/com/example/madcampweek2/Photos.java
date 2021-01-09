@@ -67,7 +67,7 @@ public class Photos {
             Photo photo = iterator.next();
             if(photo.getId() == id){
                 iterator.remove();
-                break;
+                //break;
             }
         }
 

@@ -272,7 +272,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
                         if (contact.getUserid().equals(userid)) {
                             names.add(contact.getName());
                             contactList.add(contact);
-                            contactList.sort1();
+                            //contactList.sort1();
                         }
                     }
                     listViewAdapter.notifyDataSetChanged();

@@ -119,6 +119,8 @@ public class Fragment2 extends Fragment implements View.OnClickListener, View.On
             public void onResponse(Call<Photo> call, Response<Photo> response) {
                 if (response.isSuccessful()){
                     photos = photosInstance.deletePhoto(id);
+                    adapter = new PhotoAdapter(getContext(), photos);
+                    gridView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
             }
@@ -198,6 +200,8 @@ public class Fragment2 extends Fragment implements View.OnClickListener, View.On
                             if (response.body() != null) {
                                 Log.d(TAG, "onResponse: PostGood");
                                 photos =photosInstance.updatePhoto(photo);
+                                adapter = new PhotoAdapter(getContext(), photos);
+                                gridView.setAdapter(adapter);
                                 adapter.notifyDataSetChanged();
 
                             }

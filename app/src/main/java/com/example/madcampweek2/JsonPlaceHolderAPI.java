@@ -1,5 +1,6 @@
 package com.example.madcampweek2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,16 +13,27 @@ import retrofit2.http.Path;
 
 public interface JsonPlaceHolderAPI {
 
-    @GET("contacts/")
+    @GET("/restfulapi/contacts/")
     Call<List<Contact>> getContacts();
 
-    @POST("contacts/")
+    @POST("/restfulapi/contacts/")
     Call<Contact> createContact(@Body Contact contact);
 
-    @PUT("contacts/{pk}/")
+    @PUT("/restfulapi/contacts/{pk}/")
     Call<Contact> updateContact(@Body Contact contact, @Path("pk") int pk);
 
-    @DELETE("contacts/{pk}/")
+    @DELETE("/restfulapi/contacts/{pk}/")
     Call<Contact> deleteContact(@Path("pk") int pk);
+
+
+    @GET("/restfulapi/photos/")
+    Call<ArrayList<Photo>> getAllPhoto();
+    //집어넣기
+    @POST("/restfulapi/photos/")
+    Call<Photo> createPhoto(@Body Photo photo);
+    //삭제하기
+    @DELETE("/restfulapi/photos/{id}/")
+    Call<Photo> deletePhoto(@Path("id") int id);
+
 }
 
