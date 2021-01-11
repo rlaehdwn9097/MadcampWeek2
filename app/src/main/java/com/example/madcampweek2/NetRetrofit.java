@@ -15,7 +15,7 @@ public class NetRetrofit {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("https://f1b9a7e961d7.ngrok.io")
+            .baseUrl("http://192.249.18.234:8000/")
             .addConverterFactory(GsonConverterFactory.create()) // 파싱등록
             .build();
 
