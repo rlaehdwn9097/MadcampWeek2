@@ -8,51 +8,70 @@
     tools:context=".Fragment1">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
-
+        <!--
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/search_bar" />
+        -->
         <ListView
             android:id="@+id/f1_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteY="9dp" />
 
+    </LinearLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/insertfab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/customaddtask"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:borderWidth="0dp"
-            android:layout_gravity="bottom|right"
-             />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refreshfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:src="@drawable/ic_baseline_refresh_24"
+        app:borderWidth="0dp" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/deletefab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/customdelete"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:borderWidth="0dp"
-            android:layout_gravity="bottom|right"
-            />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/mainFab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/fabPrimary"
-            android:src="@drawable/customdoneoutline"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:borderWidth="0dp"
-            android:layout_gravity="bottom|right"
-            />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/insertfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:src="@android:drawable/ic_input_add"
+        app:borderWidth="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deletefab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:src="@drawable/customdelete"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:borderWidth="0dp"
+        android:layout_gravity="bottom|right"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/fabPrimary"
+        android:src="@drawable/customdoneoutline"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:borderWidth="0dp"
+        android:layout_gravity="bottom|right"
+        />
 
 </FrameLayout>
-
