@@ -56,6 +56,6 @@ public class ContactList {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public synchronized static void sort1() {
-        contactList.sort(Comparator.reverseOrder());
+        contactList.sort(Comparator.naturalOrder());
     }
 }

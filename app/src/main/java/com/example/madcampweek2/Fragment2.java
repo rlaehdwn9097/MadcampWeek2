@@ -1,7 +1,9 @@
 package com.example.madcampweek2;
 
 import android.animation.ObjectAnimator;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -77,8 +79,9 @@ public class Fragment2 extends Fragment implements View.OnClickListener, View.On
         gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                deletePhoto(position);
-                adapter.notifyDataSetChanged();
+
+                deleteDialog(position);
+
                 return true;
             }
         });
@@ -215,6 +218,26 @@ public class Fragment2 extends Fragment implements View.OnClickListener, View.On
                 }
             }catch(Exception e) { }
         }
+    }
+
+    private void deleteDialog(int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("삭제 확인"); builder.setMessage("삭제하시겠습니까?");
+        builder.setNegativeButton("예", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //예 눌렀을때의 이벤트 처리
+                deletePhoto(position);
+                adapter.notifyDataSetChanged();
+                Toast.makeText(getContext(),"삭제되었습니다.",Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setPositiveButton("아니오", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //아니오 눌렀을때의 이벤트 처리
+            }
+        });
+        builder.show();
+
     }
 
     @Override

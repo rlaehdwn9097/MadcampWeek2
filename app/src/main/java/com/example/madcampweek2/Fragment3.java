@@ -135,17 +135,17 @@ public class Fragment3 extends Fragment {
 
                 double distance = calculate_distance(ori_embedding,test_embedding);
 
-                if(distance<7.0) {
+                if(distance<5.8) {
                     result_text.setTextColor(ContextCompat.getColor(getActivity(), R.color.sameFace));
-                    result_text.setText("Result : Same Faces");
+                    result_text.setText("Result : Same Faces"); //\n" + "distance : " + String.valueOf(distance));
                 }
-                else if(distance>9.0){
+                else if(distance>6.2){
                     result_text.setTextColor(ContextCompat.getColor(getActivity(),R.color.differentFace));
-                    result_text.setText("Result : Different Faces");
+                    result_text.setText("Result : Different Faces"); //\n" + "distance : " + String.valueOf(distance));
                 }
                 else {
-                    //result_text.setTextColor(ContextCompat.getColor(getActivity(),R.color.differentFace));
-                    result_text.setText("Result : Similar Faces");
+                    result_text.setTextColor(ContextCompat.getColor(getActivity(),R.color.similarFace));
+                    result_text.setText("Result : Similar Faces"); //\n" + "distance : " + String.valueOf(distance));
                 }
 
             }
