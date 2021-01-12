@@ -137,7 +137,7 @@ public class Fragment3 extends Fragment {
 
                 if(distance<5.8) {
                     result_text.setTextColor(ContextCompat.getColor(getActivity(), R.color.sameFace));
-                    result_text.setText("Result : Same Faces"); //\n" + "distance : " + String.valueOf(distance));
+                    result_text.setText("Result : Same Faces"); // \n" + "distance : " + String.valueOf(distance));
                 }
                 else if(distance>6.2){
                     result_text.setTextColor(ContextCompat.getColor(getActivity(),R.color.differentFace));
@@ -145,7 +145,7 @@ public class Fragment3 extends Fragment {
                 }
                 else {
                     result_text.setTextColor(ContextCompat.getColor(getActivity(),R.color.similarFace));
-                    result_text.setText("Result : Similar Faces"); //\n" + "distance : " + String.valueOf(distance));
+                    result_text.setText("Result : Similar Faces"); // \n" + "distance : " + String.valueOf(distance));
                 }
 
             }
